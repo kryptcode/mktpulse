@@ -6,14 +6,14 @@ import { useUIStore } from '@/stores/uiStore';
 
 // Define the available time ranges matching the type in uiStore
 const RANGES = ['1D', '5D', '1M', '6M', '1Y', '5Y', 'MAX'] as const;
-type TimeRange = typeof RANGES[number];
+// type TimeRange = typeof RANGES[number];
 
 const TimeRangeSelector: React.FC = () => {
   const { currentTimeRange, setTimeRange } = useUIStore();
 
   return (
     <div>
-      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 lg: mb-4">
+      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 lg:mb-4">
         Time Range
       </label>
       <div className="flex flex-wrap gap-2">

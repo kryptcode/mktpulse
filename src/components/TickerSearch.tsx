@@ -2,7 +2,7 @@
 
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useUIStore } from '@/stores/uiStore';
 import { useSymbolSearchQuery } from '@/lib/api/finnhubApi';
 import { useDebounce } from '@/hooks/useDebounce';

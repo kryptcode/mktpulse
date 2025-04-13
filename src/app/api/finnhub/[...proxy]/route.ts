@@ -62,6 +62,7 @@ export async function GET(
     //   headers: finnhubResponse.headers,
     // });
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     console.error('Error fetching from Finnhub proxy:', error);
     return NextResponse.json(

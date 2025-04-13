@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 
 import React, { useMemo, useEffect } from "react";
 // Remove the RTK Query import if ONLY using mock data
@@ -14,6 +15,7 @@ import {
 //   differenceInWeeks,
   getUnixTime,
 } from "date-fns";
+import { useGetStockCandlesQuery } from "@/lib/api/finnhubApi";
 
 // --- Configuration ---
 const USE_MOCK_DATA = true; // Set to true to use mock data for candles
@@ -102,6 +104,7 @@ const TickerDataSeries: React.FC<TickerDataSeriesProps> = React.memo(
     let candleData: { s: string; t: number[]; c: number[] } | null = null;
     let isLoading = false;
     let isError = false;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let error: any = null; // Define error even if not used when mocking
 
     if (USE_MOCK_DATA) {

@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { useGetQuoteQuery } from '@/lib/api/finnhubApi';
-import { useUIStore } from '@/stores/uiStore'; // We only need this to get the list of tickers to map over in the parent
+// import { useUIStore } from '@/stores/uiStore'; // We only need this to get the list of tickers to map over in the parent
 
 interface StockQuoteProps {
   ticker: string; // Pass the ticker symbol as a prop
